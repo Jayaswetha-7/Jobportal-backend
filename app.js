@@ -28,7 +28,10 @@ app.use(bodyparser.urlencoded({
     extended: true
 }));
 app.use(cookieparser());
-app.use(cors());
+app.use(cors({
+    origin: "https://jobportal-frontend-lilac.vercel.app/",
+    credentials: true,
+  }));
 
 //middleware
 app.use(errorHandler);

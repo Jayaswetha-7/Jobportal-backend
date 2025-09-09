@@ -58,7 +58,12 @@ const sendTokenResponse = async (user, statusCode, res) =>{
   const token =  await user.getJwtToken();
   res
       .status(statusCode)
-      .cookie("token", token, {maxAge: 60*60*1000, httpOnly: true})
+      .cookie("token", token, {
+        maxAge: 60 * 60 * 1000, // 1 hour
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production", 
+        sameSite: "None", 
+      })
       .json({success: true, role: user.role})
 }
 
