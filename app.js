@@ -30,8 +30,8 @@ app.use(bodyparser.urlencoded({
 app.use(cookieparser());
 app.use(
     cors({
-      origin:"https://jobportal-frontend-tau.vercel.app",  
-      credentials: true,                
+      origin: "https://jobportal-frontend-tau.vercel.app/", 
+      credentials: true, 
     })
   );
 
