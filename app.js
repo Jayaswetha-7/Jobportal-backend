@@ -28,7 +28,12 @@ app.use(bodyparser.urlencoded({
     extended: true
 }));
 app.use(cookieparser());
-app.use(cors());
+app.use(
+    cors({
+      origin: process.env.NODE_APP_API_URL || "http://localhost:3000",  
+      credentials: true,                
+    })
+  );
 
 //middleware
 app.use(errorHandler);
