@@ -30,7 +30,7 @@ app.use(bodyparser.urlencoded({
 app.use(cookieparser());
 app.use(
     cors({
-      origin: process.env.NODE_APP_API_URL || "http://localhost:3000",  
+      origin:"https://jobportal-frontend-tau.vercel.app",  
       credentials: true,                
     })
   );
