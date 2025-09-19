@@ -29,13 +29,13 @@ app.use(bodyparser.urlencoded({
 }));
 app.use(cookieparser());
 app.use(
-    cors({
-      origin: "https://jobportal-frontend-tau.vercel.app/", 
-      methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-      allowedHeaders: ["Content-Type", "Authorization"],
-      credentials: true, 
-    })
-  );
+  cors({
+    origin: "https://jobportal-frontend-tau.vercel.app",
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true,
+  })
+);
 
 //middleware
 app.use(errorHandler);
