@@ -32,7 +32,7 @@ app.use(
   cors({
     origin: "https://jobportal-frontend-tau.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"],
+    allowedHeaders: ["Content-Type", "Authorization", "Cache-Control", "X-Requested-With"],
     credentials: true,
   })
 );
