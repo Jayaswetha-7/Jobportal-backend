@@ -37,9 +37,6 @@ app.use(
   })
 );
 
-//middleware
-app.use(errorHandler);
-
 //route for auth
 app.use('/api', authRoutes);
 //route for users
@@ -48,6 +45,8 @@ app.use('/api', userRoutes);
 app.use('/api', jobTypeRoutes);
 //route for job
 app.use('/api', jobRoutes);
+//middleware
+app.use(errorHandler);
 
 //port
 const port = process.env.PORT || 8000
