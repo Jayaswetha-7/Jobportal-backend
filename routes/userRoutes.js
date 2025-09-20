@@ -13,6 +13,6 @@ router.put('/users/edit/:id',isAuthenticated, editUser);
 //api/admin/user/delete/id
 router.delete('/admin/users/delete/:id',isAuthenticated, isAdmin, deleteUser);
 //api/users/jobhistory
-router.post('/users/jobhistory',isAuthenticated, createUserJobsHistory);
+router.post('/user/jobhistory',isAuthenticated, createUserJobsHistory);
 
 module.exports = router;
